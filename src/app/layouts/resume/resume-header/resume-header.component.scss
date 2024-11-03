@@ -1,0 +1,32 @@
+.contact-info {
+    margin: 20px 0;
+    /* Add spacing around the contact info */
+    font-size: 16px;
+    /* Adjust font size as needed */
+    color: #333;
+    /* Change text color */
+}
+
+.contact-info a {
+    color: #007bff;
+    /* Change link color */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.container {
+    overflow-y: auto;
+    /* Allows scrolling if content overflows */
+}
+
+// .header {
+//     padding: 20px 0;
+//     /* Adjust as needed */
+//     margin-bottom: 20px;
+//     /* Adjust as needed */
+// }

@@ -1,0 +1,16 @@
+<app-loader></app-loader>
+<router-outlet></router-outlet>
+<div class="theme-pannel-main" *ngIf="url!='/landing'">
+    <ul>
+        <li class="sidebar-btn dark-light-btn" *ngIf="customize.data.settings.layout_version == 'dark'"
+            (click)="customizeLayoutVersion('light')">
+            <a href="javascript:void(0)" class="dark-light"><span class="theme-layout-version"><i
+                        class="fa-solid fa-sun"></i></span></a>
+        </li>
+        <li class="sidebar-btn dark-light-btn" *ngIf="customize.data.settings.layout_version == 'light'"
+            (click)="customizeLayoutVersion('dark')">
+            <a href="javascript:void(0)" class="dark-light"><span class="theme-layout-version"><i
+                        class="fa-solid fa-moon"></i></span></a>
+        </li>
+    </ul>
+</div>

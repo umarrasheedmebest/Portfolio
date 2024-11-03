@@ -1,0 +1,97 @@
+<section id="how-work" class="saas1 howitwork pt-5 mt-0">
+    <div class="container">
+        <div class="row">
+            <!-- Title Section -->
+            <div class="col-md-12 text-center">
+                <div class="title">
+                    <div class="main-title">
+                        <h2>My Projects</h2>
+                    </div>
+                    <hr>
+                    <div class="sub-title">
+                        <p class="p-padding">These mobile and web development projects highlight a comprehensive
+                            approach to building user-friendly applications tailored to meet diverse client needs. By
+                            leveraging the latest technologies, each project emphasizes responsive design, ensuring
+                            smooth and consistent functionality across a wide range of devices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="col-md-12 work-tab">
+                <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item text-center" *ngFor="let data of nav">
+                        <a class="nav-link" [ngClass]="{'active show': work == data.title }"
+                            (click)="openWorkSlide(data.title)">
+                            <img [src]="data.img" alt="tab-image-1">
+                            <h6>{{data.title}}</h6>
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tab Content Section -->
+        <div class="work-tab-bg work-content p-t-50 music artist">
+            <div class="tab-content text-center" id="pills-tabContent">
+                <!-- Mobile App Carousel -->
+                <div *ngIf="work === 'Mobile App'" class="col-12" id="pills-work1" role="tabpanel">
+                    <owl-carousel-o [options]="artistscarouselOptions" class="artist-slider">
+                        <ng-container *ngFor="let data of mobileContent">
+                            <ng-template carouselSlide class="item">
+                                <a [routerLink]="data.link">
+                                    <div class="album-artist text-center">
+                                        <img [src]="data.img" alt="" class="img-fluid set-relative overlay-img">
+                                        <div>
+                                            <div class="overlay-box2"></div>
+                                        </div>
+                                        <div class="set-abs bottom-0 w-100 text-left set-z-index">
+                                            <div class="singers">
+                                                <div class="m-b-10">
+                                                    <h3 class="name">{{data.name}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="set-abs cds">
+                                            <img src="assets/images/resume/cd2.png" alt="" class="cd-animation">
+                                        </div>
+                                    </div>
+                                </a>
+                            </ng-template>
+                        </ng-container>
+                    </owl-carousel-o>
+                </div>
+
+                <!-- Web App Carousel -->
+                <div *ngIf="work === 'Web App'" class="col-12" id="pills-work2" role="tabpanel">
+                    <owl-carousel-o [options]="artistscarouselOptions" class="artist-slider">
+                        <ng-container *ngFor="let data of webContent">
+                            <ng-template carouselSlide class="item">
+                                <a [routerLink]="data.link">
+                                    <div class="album-artist text-center">
+                                        <img [src]="data.img" alt="" class="img-fluid set-relative overlay-img">
+                                        <div>
+                                            <div class="overlay-box2"></div>
+                                        </div>
+                                        <div class="set-abs bottom-0 w-100 text-left set-z-index">
+                                            <div class="singers">
+                                                <div class="m-b-10">
+                                                    <h3 class="name">{{data.name}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="set-abs cds">
+                                            <img src="assets/images/resume/cd2.png" alt=""
+                                                class="cd-animation width150">
+                                        </div>
+                                    </div>
+                                </a>
+                            </ng-template>
+                        </ng-container>
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

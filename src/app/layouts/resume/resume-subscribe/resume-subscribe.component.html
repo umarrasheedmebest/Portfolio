@@ -1,0 +1,81 @@
+<section class="app2 about format" id="DEMO">
+    <div class="container">
+        <div class="col-md-10 offset-md-1">
+            <div class="title title2">
+                <h6 class="font-primary borders main-text text-uppercase">
+                    <span> Demo & Proposals</span>
+                </h6>
+                <div class="sub-title">
+                    <h2 class="title-text text-capitalize text-center"
+                        style="font-family: 'Courier New', Courier, monospace; color: black;">
+                        DEMO REQUEST
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 counters set-height">
+                <img src="assets/images/resume/main/contactus.png" alt="image icon" class="img-fluid demoimg" />
+            </div>
+            <div class="col-sm-7 counters">
+                <div class="abouts center-text">
+                    <div>
+                        <div class="row">
+                            <div class="typography-box">
+                                <div class="typo-content">
+                                    <form [formGroup]="myForm">
+                                        <div class="form-row">
+                                            <div class="col-12 mb-2">
+                                                <input type="radio" name="RequestType" id="1" value="Proposal Quotation"
+                                                    formControlName="requestType" formControlName="requestType" />
+                                                <label for="one">&nbsp;Proposal Quotation</label>
+                                            </div>
+                                            <div class="col-12 mb-2">
+                                                <input type="radio" name="RequestType" id="2" value="Demo request"
+                                                    formControlName="requestType" formControlName="requestType" />
+                                                <label for="two">&nbsp;Demo request</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-12 mb-2">
+                                                <input type="text" class="form-control" name="requestByName"
+                                                    id="requestByName" formControlName="requestByName"
+                                                    placeholder="Enter Your name" required="true" type="text" />
+                                            </div>
+                                            <div class="col-12 mb-2">
+                                                <input type="text" class="form-control" name="companyName"
+                                                    placeholder="Enter Company name" required="true" type="text"
+                                                    formControlName="companyName" />
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-12 mb-2">
+                                                <input type="number" class="form-control" name="mobile"
+                                                    placeholder="Enter Mobile number" required="true" type="number"
+                                                    formControlName="mobile" />
+                                            </div>
+                                            <div class="col-12 mb-2">
+                                                <input type="text" class="form-control" name="email"
+                                                    placeholder="Your Email" required="true" type="email"
+                                                    formControlName="email" />
+                                            </div>
+                                            <div class="col-12 mb-2">
+                                                <textarea class="form-control" placeholder="Write Your Message"
+                                                    name="message" rows="5" type="text"
+                                                    formControlName="message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-default btn-gradient m-t-50" (click)="submit()">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

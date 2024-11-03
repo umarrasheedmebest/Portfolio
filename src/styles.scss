@@ -1,0 +1,45 @@
+.team-slider {
+  position: relative !important;
+  padding: 0 50px !important;
+}
+
+.owl-prev {
+  position: absolute !important;
+  top: 50% !important;
+  left: -40px !important;
+  transform: translateY(-50%) !important;
+  z-index: 1000 !important;
+  background: #04185B !important;
+  border: #04185B !important;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  padding: 2px 2px !important;
+}
+
+.owl-next {
+  position: absolute !important;
+  top: 50% !important;
+  right: -40px !important;
+  transform: translateY(-50%) !important;
+  z-index: 1000 !important;
+  background: #04185B !important;
+  border: #04185B !important;
+}
+
+
+.owl-prev img,
+.owl-next img {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+@media (max-width: 576px) {
+  .owl-prev {
+    left: -20px !important;
+  }
+
+  .owl-next {
+    right: -20px !important;
+  }
+}

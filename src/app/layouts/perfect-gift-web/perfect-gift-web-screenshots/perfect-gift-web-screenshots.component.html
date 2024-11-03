@@ -1,0 +1,26 @@
+<!--slider css start-->
+<section class="saas2 laptop-slider bg-light" id="screenshot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="title">
+                    <div class="main-title">
+                        <h2 class="text-white text-dark">screen shot</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="slider-container">
+            <owl-carousel-o [options]="screenshotscarouselOptions" class="trainers-slider">
+                <ng-container *ngFor="let screenshot of screenshots">
+                    <ng-template carouselSlide class="item">
+                        <img [src]="screenshot.img" alt="" class="img-fluid">
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+<!--slider css start-->
